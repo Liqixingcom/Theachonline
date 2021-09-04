@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableDiscoveryClient  //nacos注册
 @EnableFeignClients
-@EnableScheduling//开启自动任务
+@EnableScheduling// 开启自动任务
 @ComponentScan(basePackages = {"com.atguigu"})
 public class EduApplication {
 
