@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.eduservice.mapper.EduTeacherMapper">
+    <select id="getTeacherByid" resultType="com.atguigu.eduservice.entity.EduTeacher">
+        select * from edu_teacher where id=#{id}
+    </select>
+    
+    <select id="searchTeacherById" resultType="com.atguigu.eduservice.entity.EduTeacher">
+        select  select * from edu_teacher
+        <where>
+            id in (
+            <foreach collection="list" separator="," item="id">
+                #{id}
+            </foreach>
+            )
+        </where>
+    </select>
+    
+    
+</mapper>
